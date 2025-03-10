@@ -1,0 +1,60 @@
+@keyframes dropMessage {
+  0% { transform: translateY(-150px) scale(0.5); opacity: 0; } 
+  40% { transform: translateY(10px) scale(1.1); opacity: 1; } 
+  60% { transform: translateY(0px) scale(1); } 
+  75% { transform: translateY(5px); } 
+  100% { transform: translateY(0px); } 
+}
+
+@keyframes alertShake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+  75% { transform: translateX(-3px); }
+  100% { transform: translateX(0); }
+}
+
+.quote-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(3, 209, 54, 0.9);
+  padding: 15px;
+  border-radius: 20px 20px 5px 20px;
+  max-width: 250px;
+  word-wrap: break-word;
+  white-space: normal;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  
+  /* Animation */
+  animation: dropMessage 0.8s ease-out, alertShake 1.5s infinite 2s ease-in-out;
+}
+.button-group {
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 8px 12px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #ccc;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.quote-text {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
